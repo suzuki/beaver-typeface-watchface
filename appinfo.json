@@ -1,0 +1,25 @@
+{
+  "uuid": "4ffc4805-6aed-4cea-aa8b-902feb375dcf",
+  "shortName": "beaver-typeface-watchface",
+  "longName": "beaver-typeface-watchface",
+  "companyName": "0610.org",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["basalt"],
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+      {
+        "type": "font",
+        "name": "FONT_BEAVER_56",
+        "file": "fonts/beaver.ttf",
+        "compatibility": "2.7"
+      }
+    ]
+  }
+}
