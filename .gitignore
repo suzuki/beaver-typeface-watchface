@@ -4,3 +4,6 @@ build
 
 # Ignore waf lock file
 .lock-waf*
+
+# Ignore font file
+resources/fonts/beaver.ttf
