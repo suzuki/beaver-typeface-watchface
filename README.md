@@ -3,6 +3,14 @@
 This is a watchface for Pebble. It use the BEAVER Typeface font that I liked.
 This repository not include this font, so you must get it to compile this software.
 
+### Pebble, Pebble Steel version
+
+![Aplite Screenshot](screenshot/aplite.png)
+
+### Pebble Time, Pebble Time Steel version
+
+![Basalt Screenshot](screenshot/basalt.png)
+
 ## FONT
 
 * BEAVER Typeface // FREE
