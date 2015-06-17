@@ -3,9 +3,9 @@
   "shortName": "beaver-typeface-watchface",
   "longName": "beaver-typeface-watchface",
   "companyName": "0610.org",
-  "versionLabel": "1.0",
+  "versionLabel": "1.1",
   "sdkVersion": "3",
-  "targetPlatforms": ["basalt"],
+  "targetPlatforms": ["aplite", "basalt"],
   "watchapp": {
     "watchface": true
   },

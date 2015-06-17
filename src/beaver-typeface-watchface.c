@@ -35,8 +35,12 @@ static void window_load(Window *window) {
   time_layer = text_layer_create((GRect) { .origin = { 0, 46 }, .size = { bounds.size.w, 58 } });
   text_layer_set_text_alignment(time_layer, GTextAlignmentCenter);
   text_layer_set_font(time_layer, beaver_font_56);
-  text_layer_set_text_color(time_layer, GColorCyan);
   text_layer_set_background_color(time_layer, GColorClear);
+#ifdef PBL_PLATFORM_BASALT
+  text_layer_set_text_color(time_layer, GColorCyan);
+#else
+  text_layer_set_text_color(time_layer, GColorWhite);
+#endif
 
   layer_add_child(window_layer, text_layer_get_layer(time_layer));
 
@@ -51,7 +55,12 @@ static void window_unload(Window *window) {
 
 static void init(void) {
   window = window_create();
+#ifdef PBL_PLATFORM_BASALT
   window_set_background_color(window, GColorDarkGray);
+#else
+  window_set_background_color(window, GColorBlack);
+#endif
+
   window_set_window_handlers(window, (WindowHandlers) {
     .load = window_load,
     .unload = window_unload,
