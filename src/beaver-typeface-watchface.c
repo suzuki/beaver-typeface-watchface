@@ -32,11 +32,15 @@ static void window_load(Window *window) {
 
   beaver_font_56 = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_BEAVER_56));
 
+#if defined(PBL_RECT)
   time_layer = text_layer_create((GRect) { .origin = { 0, 46 }, .size = { bounds.size.w, 58 } });
+#elif defined(PBL_ROUND)
+  time_layer = text_layer_create((GRect) { .origin = { 0, 52 }, .size = { bounds.size.w, 58 } });
+#endif
   text_layer_set_text_alignment(time_layer, GTextAlignmentCenter);
   text_layer_set_font(time_layer, beaver_font_56);
   text_layer_set_background_color(time_layer, GColorClear);
-#ifdef PBL_PLATFORM_BASALT
+#if defined(PBL_COLOR)
   text_layer_set_text_color(time_layer, GColorCyan);
 #else
   text_layer_set_text_color(time_layer, GColorWhite);
@@ -55,7 +59,7 @@ static void window_unload(Window *window) {
 
 static void init(void) {
   window = window_create();
-#ifdef PBL_PLATFORM_BASALT
+#if defined(PBL_COLOR)
   window_set_background_color(window, GColorDarkGray);
 #else
   window_set_background_color(window, GColorBlack);

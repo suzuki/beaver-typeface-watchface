@@ -11,6 +11,10 @@ This repository not include this font, so you must get it to compile this softwa
 
 ![Basalt Screenshot](screenshot/basalt.png)
 
+### Pebble Time Round version
+
+![Chalk Screenshot](screenshot/chalk.png)
+
 ## FONT
 
 * BEAVER Typeface // FREE
